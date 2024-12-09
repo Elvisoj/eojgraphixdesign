@@ -1,4 +1,4 @@
-import github_icon from "./Github-Symbol.png"
+import github_icon from "./GitHub-Symbol.png"
 import fb_icon from "./facebook.png"
 import twitter_icon from "./twitter.png"
 import send_icon from "./send_icon.png"
