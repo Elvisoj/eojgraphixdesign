@@ -55,6 +55,53 @@ button:hover{
 
 
 
+/* POPUP / GREET USER SECTION */
+.popup.great-user{
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    max-width: 500px;
+    background: var(--pry-bg-clr);
+    background: transparent;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(20px);
+    padding: 20px;
+}
+.popup.great-user .popup-container{
+    border: 2px solid var(--card-bg-clr);
+    padding: 20px;
+    border-radius: 10px;
+}
+.popup.great-user .popup-container h3{
+    padding-bottom: 10px;
+    color: var(--btn-clr);
+    font-size: var(--ls-fx-s);
+}
+.popup.great-user .popup-container h4{
+    padding-bottom: 10px;
+    font-size: var(--fx-s);
+    color: var(--sec-tx-clr);
+    font-weight: 400;
+}
+.popup.great-user .popup-container p{
+    font-weight: 300;
+    line-height: 1.8rem;
+}
+.popup.great-user .close-btn{
+    position: absolute;
+    top:20px;
+    right: 20px;
+}
+.popup.great-user .close-btn img{
+    width: 30px;
+    rotate: 45deg;
+    cursor: pointer;
+}
+.popup.great-user .close-btn img:hover{
+    opacity: .7;
+}
 /* HOME LANDING SECTION */
 .homepage-header {
     position: fixed;
@@ -62,6 +109,11 @@ button:hover{
     left: -120%;
     box-shadow: 10px 0 15px rgba(0, 0, 0, 0.3);
     z-index: 1000;
+    transition: 400ms ease-in-out;
+}
+.homepage-header.active{
+    left: 0;
+    transition: 400ms ease-in-out;
 }
 .homepage-header-container{
     width: 400px;
@@ -71,6 +123,8 @@ button:hover{
     flex-direction: column;
 }
 .homepage-header-container .theme{
+    display: flex;
+    align-items: center;
     width: 100%;
     height: 80px;
     background: #cf0f0f;
@@ -78,6 +132,30 @@ button:hover{
     font-weight: 700;
     color: var(--pry-tx-clr);
     padding:20px;
+}
+.theme span{
+    display: block;
+    width: 60px;
+    height: 30px;
+    background: var(--pry-bg-clr);
+    margin-left: 20px;
+    border-radius: 30px;
+    position: relative;
+}
+.theme .theme-color::after{
+    content: "";
+    position: absolute;
+    top: 2px;  
+    left: 5px;
+    width: 26px;
+    height: 26px;
+    background: radial-gradient( #cf0f0f, black);
+    border-radius: 50%;
+    transition: 200ms linear;
+}
+.theme .toggle.theme-color::after{
+    left: 30px;
+    transition: 200ms linear;
 }
 
 .homepage-header-container ul{
@@ -91,6 +169,72 @@ button:hover{
 }
 .homepage-header-container li:hover{
     background: var(--btn-clr);
+}
+
+.handburger-menu{
+    position: fixed;
+    top: 60px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 20px 10px 10px;
+    backdrop-filter: blur(10px);
+    background: transparent;
+}
+.handburger-menu .menubar{
+    position: relative;
+    width: 40px;
+    height: 4px;
+    background: var(--logo-clr);
+    cursor: pointer;
+    z-index: 1001;
+}
+.handburger-menu .menubar::after{
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    width: 30px;
+    height: 4px;
+    background: var(--logo-clr);
+}
+.handburger-menu .menubar::before{
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    width: 20px;
+    height: 4px;
+    background: var(--logo-clr);
+}
+.handburger-menu .menubar:hover {
+    background: var(--btn-clr);
+    width: 10px;
+}
+.homepage-header .close-btns{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.homepage-header .close-btn{
+    position: relative;
+    width: 40px;
+    height: 4px;
+    background: var(--pry-bg-clr);
+}
+.homepage-header .close-btn::after{
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    width: 30px;
+    height: 4px;
+    background: var(--pry-bg-clr);
 }
 
 
@@ -112,36 +256,7 @@ button:hover{
     cursor: pointer;
     border-radius: 10px;
 }
-.handburger-menu{
-    position: absolute;
-    top: 60px;
-    left: 20px;
-    width: 40px;
-    height: 4px;
-    background: var(--pry-bg-clr);
-    cursor: pointer;
-}
-.handburger-menu::after{
-    content: "";
-    position: absolute;
-    top: 10px;
-    left: 0px;
-    width: 30px;
-    height: 4px;
-    background: var(--pry-bg-clr);
-}
-.handburger-menu::before{
-    content: "";
-    position: absolute;
-    top: 20px;
-    left: 0px;
-    width: 20px;
-    height: 4px;
-    background: var(--pry-bg-clr);
-}
-.handburger-menu:hover {
-    left: 0;
-}
+
 .landing-page-container{
     width: 100%;
     height: 100%;
@@ -162,17 +277,23 @@ button:hover{
     font-size: var(--ls-fx-m);
     padding: 0 0 var(--pd-m);
     max-width: 80%;
+    color: var(--pry-tx-clr);
+}
+.landing-page-container .section-context > h1{
+    font-size: var(--ls-fx-m);
+    padding-left: var(--pd-s);
+    bkorder-left: 4px solid var(--logo-clr);
 }
 
 
 /* SUBSCRIPTION BUTTON SECTION */
 .subscription{
+    position: relative;
     display: flex;
     padding: var(--pd-s) ;
-    align-items: center;
-    position: relative;
+    flex-direction: column;
 }
-.subscription::after{
+.subscriphtion::after{
     content: "";
     width: 10%;
     height: 2px;
@@ -189,8 +310,33 @@ button:hover{
     color: var(--pry-tx-clr);
     width: 70%;
 }
+.subscription form {
+    border-bottom: 2px solid var(--btn-clr);
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.subscription form input{
+    border: none;
+    width: 70%;
+    background: transparent;
+    padding: 0 20PX;
+    color: var(--pry-tx-clr);
+    margin-bottom: -15px;
+}
+.subscription input:hover,
+.subscription input:focus{
+    border: none;
+    outline: none;
+}
+.subscription input::placeholder{
+    color: var(--pry-tx-clr);
+    font-size: var(--fx-s);
+}
+
 .subscription button{
-    border-radius: 8px;
+    box-shadow: none;
+
 }
 @keyframes subLine {
     0%{
@@ -222,79 +368,16 @@ button:hover{
     color: var(--pry-tx-clr);
 }
 
+:focus{
+    padding: 20px;
+    border: none;
+    border: 2px solid var(--btn-clr);
+    outline: none;
 
-/********* GALLERY SECTION *******/
-.gallery{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 40px 5%;
 }
-.gallery-description{
-    margin: 20px;
-}
-.gallery-description h1{
-    color: blue;
-    border-left: 5px solid var(--btn-clr);
-    padding-left: 10px;
-    margin-bottom: 10px;
-}
-.gallery-container{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.gallery-container h2{
-    margin: 30px 0 10px;
-    border-bottom: 2px solid var(--btn-clr);
-    color: var(--btn-clr);
-    padding-bottom: 10px;
-}
-.image-card-container{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 300px);
-    place-content: center;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-}
-.image-card{
-    position: relative;
-    width: 100%;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-    aspect-ratio: 6/7;
-    overflow: hidden;
-}
-.image-card img{
-    width: 100%;
-    aspect-ratio: 6/7;
-}
-.image-card .about{
-    position: absolute;
-    bottom: -300px;
-    right: 0;
-    padding: 10px;
-    background: var(--sec-tx-clr);
-    width: 100%;
-    color: var(--pry-tx-clr);
-    transition: 200ms ease;
-    opacity: .9;
-}
-.image-card .about h2{
-    color: yellow;
-    border-bottom: 2px solid yellow;
-    padding-bottom: 5px;
-    margin-bottom: 5px;
-}
-.image-card:hover  .about{
-    bottom: 0;
-    transition: 200ms ease-in-out;
-}
+
+
+
 
 @media screen and (max-width: 768px) {
     .landing-page-container .section-context{
@@ -303,7 +386,7 @@ button:hover{
     .landing-page-container h2{
         font-size: var(--fx-m);
     }    
-    .subscription{
+    /* .subscription{
         flex-direction: column;
         justify-content: left;
     }
@@ -316,4 +399,14 @@ button:hover{
         width: fit-content;
         margin-left: -190px;
     }
-}
+    */
+    .contact-container{
+        flex-direction: column;
+    }
+    .contact-form{
+        border: none;
+        order: 2;
+        border-top: 20px solid var(--btn-clr);
+        padding: 40px 20px;
+    }
+} 

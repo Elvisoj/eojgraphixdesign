@@ -1,0 +1,76 @@
+/********* GALLERY SECTION *******/
+.gallery{
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 5%;
+    margin-bottom: 20px;
+}
+.gallery-description{
+    margin: 20px;
+}
+.gallery-description h1{
+    color: blue;
+    border-left: 5px solid var(--btn-clr);
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+.gallery-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.gallery-container h2{
+    margin: 30px 0 10px;
+    border-bottom: 2px solid var(--btn-clr);
+    color: var(--btn-clr);
+    padding-bottom: 10px;
+}
+.image-card-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    place-content: center;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+.image-card{
+    position: relative;
+    width: 100%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    aspect-ratio: 6/7;
+    overflow: hidden;
+}
+.image-card img{
+    width: 100%;
+    aspect-ratio: 6/7;
+}
+.image-card .about{
+    position: absolute;
+    bottom: -200%;
+    left: 0;
+    padding: 10px;
+    background: var(--sec-tx-clr);
+    width: 100%;
+    color: var(--pry-tx-clr);
+    transition: 200ms ease;
+    opacity: .9;
+}
+.image-card .about h2{
+    color: yellow;
+    border-bottom: 2px solid yellow;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+.image-card:hover  .about{
+    bottom: 0;
+    transition: 200ms ease-in-out;
+}
+
+
+

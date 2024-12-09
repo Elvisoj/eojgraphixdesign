@@ -1,0 +1,22 @@
+#about{
+    background: linear-gradient(rgba(128, 0, 128, 0.575), rgba(98, 178, 253, 0.493)), url("../../assets/Buildings.jpg"), linear-gradient(purple, orangered);
+    padding: 40px 10%;
+    width: 100%;
+    height: 50%;
+    overflow: hidden scroll;
+    color: var(--pry-tx-clr);    
+}
+#about::-webkit-scrollbar{
+    display: none;
+}
+
+.about-content{
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    background: rgba(68, 227, 248, 0.26);
+}
+.about-content h3{
+    padding: 20px 0;
+}
