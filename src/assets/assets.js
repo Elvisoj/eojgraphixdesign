@@ -9,7 +9,7 @@ import linkedin_icon from "./linkedin.webp"
 import sidepic from "./sidepic.jpg"
 import plus_icon from "./plus_icon.png"
 import buildings from "./Buildings.jpg"
-import userprofile_icon from "./userprofile.png"
+import userprofile_icon from "./UserProfile.png"
 import logo_icon from "./brandlogo.svg"
 
 //GALLERY IMAGES
