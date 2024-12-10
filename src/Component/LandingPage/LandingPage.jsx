@@ -31,7 +31,7 @@ function LandingPage() {
                 <p>Subscribe to our letter to be the first to get notify on every updates</p>
                 <form>
                   <input type="text" placeholder="Subsrribe to our Newsletter..."/>
-                  <button>Subscribe Now!</button>
+                  <button>Subscribe!</button>
                 </form>
             </div>
             <h1>EOJ Graphix Empire</h1>

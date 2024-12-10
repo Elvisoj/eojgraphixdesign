@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+/* 
 :root{
   --pry-bg-clr: #FFFFFF;
   --sec-bg-clr: #dfddda;
@@ -10,7 +11,7 @@
   --highlight-pink: #ff6f61;
   --logo-clr:#0efff3;
 
-  /* BOX SHADOWS */
+
   --mixed-look-sh: 5px 5px 10px rgba(0,0,0,0.1), -5px -5px 10px rgba(255, 255, 255, 0.7), inset 5px 5px 10px rgba(0,0,0,0.1), inset -5px -5px 10px rgba(255, 255, 255, 0.7);
   --raised-look-sh: 5px 5px 10px rgba(0,0,0,0.1), -5px -5px 10px rgba(255, 255, 255, 0.7);
   --full-raised-look-sh: 5px 5px 10px rgba(0,0,0,0.1), -5px -5px 10px rgba(255, 255, 255, 0.7), -5px -5px 10px rgba(0,0,0,0.1), -5px -5px 10px rgba(255, 255, 255, 0.7);
@@ -20,8 +21,7 @@
     --ls-fx-m: 2.5rem;
     --ls-fx-l: 4rem;
 
-    /* SMALL SCREEN FONT SIZE */
-    --fx-s: 1.3rem;
+    --fx-s: 1rem;
     --fx-m: 2rem;
     --fx-l: 3rem;
 
@@ -37,8 +37,34 @@
     
     --card-bg-clr: #dcf5f8;
     --btn-clr: #0890ff;
-  /* FONT SIZE */
+} */
+#root{
+  --pry-bg: #ffffff;
+  --pry-brown: #8b4513;
+  --accent-beige: #d2b48c;
+  --soft-cream: #f5f5dc;
+  --dark-accent: #5a2d0c;
+  --tx-light: #333333;
+
+/*   
+  --pry-bg: #2b1b0f;
+  --pry-brown: #a0522d;
+  --accent-beige: #c19a6b;
+  --soft-cream: #bca487;
+  --dark-accent: #3d2a14;
+  --tx-light: #f5f5f5; */
+
+  
+  --fx-s: 1rem;
+  --fx-m: 2rem;
+  --fx-l: 3rem;
+
+  --pd-l: 2.5rem;
+  --pd-m: 2rem;
+  --pd-s: 1rem;
 }
+
+
 *{
   margin: 0;
   padding: 0;
@@ -49,6 +75,9 @@
 #root{
   width: 100%;
   height: 100vh;
+}
+.title{
+  color: var(--pry-brown);
 }
 
 .dashboard{
@@ -76,13 +105,13 @@ button{
   padding: 10px 15px;
   margin-top: 10px;
   cursor: pointer;
-  background: var(--btn-clr);
+  background: var(--dark-accent);
   color: var(--pry-tx-clr);
   transition: 200ms linear;
 }
 button:hover{
-  background: var(--pry-bg-clr);
-  color: var(--btn-clr);
+  background: var(--pry-bg);
+  color: var(--dark-accent);
   scale: .96;
   transition: 200ms linear;
 }

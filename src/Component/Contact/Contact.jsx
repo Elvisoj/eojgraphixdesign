@@ -10,7 +10,7 @@ function Contact() {
       <div className="contact-container">
         
         <div className="contact-form">
-            <h2>Contact Us</h2>
+            <h2 className='title'>Contact Us</h2>
             <form>
                 <input name='name' type="text" placeholder='Name' />
                 <input name='email' type="tel" placeholder='Email address ' />
@@ -20,9 +20,6 @@ function Contact() {
             </form>
         </div>
 
-        <div className="right-side">
-            <img src={assets.sidepic} alt="" />
-        </div>
       </div>
     </div>
   )

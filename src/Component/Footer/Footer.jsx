@@ -6,7 +6,7 @@ function Footer() {
     <div className='homepage-footer'>
       <div className="homepage-footer-container">
         <div className="social-media">
-            <h2 className='sub-title'>Follow us on social media to get latest update</h2>
+            <h2 className='title'>Follow us on social media to get latest update</h2>
             <div className="content">
                 <a href='#' className="box media github">
                   <img src={assets.github_icon} alt="" />

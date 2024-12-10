@@ -1,19 +1,19 @@
 /********* GALLERY SECTION *******/
 .gallery{
     width: 100%;
-    min-height: 80vh;
+    height:auto;
     display: flex;
     align-items: center;
     flex-direction: column;
     padding: 40px 5%;
     margin-bottom: 20px;
+    color: var(--tx-light);
 }
 .gallery-description{
     margin: 20px;
 }
 .gallery-description h1{
-    color: blue;
-    border-left: 5px solid var(--btn-clr);
+    border-left: 5px solid var(--pry-brown);
     padding-left: 10px;
     margin-bottom: 10px;
 }
@@ -24,10 +24,12 @@
     align-items: center;
 }
 .gallery-container h2{
-    margin: 30px 0 10px;
-    border-bottom: 2px solid var(--btn-clr);
-    color: var(--btn-clr);
-    padding-bottom: 10px;
+    margin: 30px 0 30px;
+    color: var(--accent-beige);
+    background: var(--dark-accent);
+    width: 100%;
+    text-align: center;
+    padding: 10px;
 }
 .image-card-container{
     position: relative;
@@ -55,15 +57,18 @@
     bottom: -200%;
     left: 0;
     padding: 10px;
-    background: var(--sec-tx-clr);
+    background: var(--tx-light);
     width: 100%;
     color: var(--pry-tx-clr);
     transition: 200ms ease;
     opacity: .9;
 }
 .image-card .about h2{
-    color: yellow;
-    border-bottom: 2px solid yellow;
+    text-align: left;
+    background: transparent;
+    padding: 0;
+    border-bottom: 2px solid var(--soft-cream);
+    
     padding-bottom: 5px;
     margin-bottom: 5px;
 }

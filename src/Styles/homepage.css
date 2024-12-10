@@ -91,18 +91,3 @@
 
 
 /* HOME LANDING SECTION */
-
-
-
-
-@media screen and (max-width: 768px) {
-    .contact-container{
-        flex-direction: column;
-    }
-    .contact-form{
-        border: none;
-        order: 2;
-        border-top: 20px solid var(--btn-clr);
-        padding: 40px 20px;
-    }
-} 

@@ -4,7 +4,7 @@ import "./sidebar.css"
 import { assets } from '../../assets/assets'
 
 function Sidebar() {
-    const [ isVisible, setIsvisible ] = useState(true)
+    const [ isVisible, setIsvisible ] = useState(false)
   return (
     <div className='db-sidebar'>
       <div className="db-sidebar-container">

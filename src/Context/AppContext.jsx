@@ -2,34 +2,45 @@ import { createContext, useRef, useState } from "react";
 import { assets } from "../assets/assets";
 
 //GALLERY IMAGES
-const { BirthdayImg, FlyerOne, FlyerTwo, FlyerThree } = assets.galleryImg
+const { Kidd0,
+    Kidd1,
+    Kidd2,
+    Kidd3,
+    Kidd4 } = assets.galleryImg
 
 export const AppContext = createContext();
 const defaultGalleryData = [
     {
         id: 21,
-        thumbnail: BirthdayImg,
+        thumbnail: Kidd0,
         title: "Birthday Flyer",
         isEditing: false,
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, praesentium"
     },
     {
         id: 22,
-        thumbnail: FlyerOne,
+        thumbnail: Kidd1,
         title: "Graphic Design Poster",
         isEditing: false,
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, praesentium"
     },
     {
         id: 23,
-        thumbnail: FlyerTwo,
+        thumbnail: Kidd2,
         title: "Graphic Design",
         isEditing: false,
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, praesentium"
     },
     {
         id: 24,
-        thumbnail: FlyerThree,
+        thumbnail: Kidd3,
+        title: "Poster Design",
+        isEditing: false,
+        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, praesentium"
+    },
+    {
+        id: 25,
+        thumbnail: Kidd4,
         title: "Poster Design",
         isEditing: false,
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, praesentium"

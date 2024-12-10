@@ -1,21 +1,16 @@
 .landing-page{
     position: relative;
     width: 100%;
-    height: 100%;
-    background: linear-gradient(125deg,
-                rgb(216, 11, 107), 
-                rgb(225, 0, 255), 
-                rgb(149, 14, 212)80% 0);
+    background: url(../../assets/backgroung-image.jpg), linear-gradient(rgba(0, 0, 0, 0.514), rgba(165, 42, 42, 0.637));
+
+
 }
-
-
 .landing-page-container{
     width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: var(--pd-m);
+    padding: var(--pd-l);
 }
 .landing-page-container .section-context{
     padding: var(--pd-l);
@@ -23,45 +18,50 @@
 .landing-page-container .section-context > p{
     font-size: var(--ls-fx-s);
     padding: var(--pd-s) 0;
+    color: var(--accent-beige);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .landing-page-container .section-context > h2{
     font-size: var(--ls-fx-m);
     padding: 0 0 var(--pd-m);
     max-width: 80%;
-    color: var(--pry-tx-clr);
+    color: var(--soft-cream);
 }
 .landing-page-container .section-context > h1{
     font-size: var(--ls-fx-m);
     padding-left: var(--pd-s);
-    bkorder-left: 4px solid var(--logo-clr);
+    color: var(--soft-cream);
+    padding-bottom: var(--pd-l);
 }
-
 
 /* SUBSCRIPTION BUTTON SECTION */
  .subscription{
     position: relative;
     display: block;
     padding: var(--pd-s) ;
+    color: var(--accent-beige);
 
 }
 .subscription form{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: left;
     margin-top: 20px;
+    background: var(--pry-bg);
+    border-top-right-radius: 10px;
 }
 .subscription form input{
      border: none;
-     border-bottom: 2px solid var(--pry-tx-clr);
-     border-radius: 0;
-     flex: 4;
+     margin: 0;
 }
 .subscription form button{
     border-radius: 0;
-    background: var(--pry-bg-clr);
-    color: var(--btn-clr);
+    background: var(--pry-brown);
+    color: var(--pry-bg);
     padding: 10px;
-    flex: 2;
+    margin: 0;
+    border-top-right-radius: 10px;
 }
 .subscription form button:hover{
     background: whitesmoke;
@@ -94,11 +94,9 @@
     
 }
 
-.landing-page-container h1{
-    font-size: var(--ls-fx-l);
-    color: var(--pry-tx-clr);
-}
 
+
+/*
 
 @media screen and (max-width: 768px) {
     .landing-page-container{
@@ -127,3 +125,4 @@
     }
     
 } 
+*/

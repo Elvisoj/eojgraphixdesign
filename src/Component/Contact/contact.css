@@ -3,23 +3,30 @@
 .contact{
     width: 100%;
     height: auto;
-    background:#f8f8f8;
-    padding: 30px 40px;
+    background:var(--accent-beige);
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
 .contact-container {
-    max-width: 1000px;
-    display: flex;
-    background:  lightgray;
+}
+.contact .title{
+    font-size: var(--fx-m);
+    margin-bottom: 30px;
 }
 .contact-form{
+    min-width: 330px;
     margin-top: 20px;
     flex: 1;
-    border-right: 5px solid whitesmoke;
-    padding: 10px 20px;
+    padding: 30px 20px;
+    border: 2px solid var(--soft-cream);
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+.contact-form form{
+    width: 100%;
 }
 .contact-form input, .contact-form textarea{
     display: block;
@@ -27,6 +34,7 @@
     padding: 10px 20px;
     margin-bottom: 20px;
     border: none;
+    background: var(--soft-cream);
 }
 input:hover, input:focus, textarea:hover, textarea:focus{
     outline: none;
@@ -34,28 +42,9 @@ input:hover, input:focus, textarea:hover, textarea:focus{
 }
 .contact-form button{
     padding: 10px 40px;
-}
-.right-side{
-    flex: 1;
-    margin-left: 20px;
-    border-radius: 10px;
-    overflow: hidden;
-    
-}
-.right-side img{
-    width: 100%;
-    animation: ScaleSize 20s infinite;
-    scale: .8;
+    background: var(--dark-accent);
 }
 
-@keyframes ScaleSize {
-    0%{ scale: 1;}
-    50%{scale: .7;}
-    100%{
-        scale: .8;
-    }
-    
-}
 
 
 

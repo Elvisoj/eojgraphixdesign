@@ -9,18 +9,19 @@ import linkedin_icon from "./linkedin.webp"
 import sidepic from "./sidepic.jpg"
 import plus_icon from "./plus_icon.png"
 import buildings from "./Buildings.jpg"
-import elvis from "./elvis.jpg"
+import userprofile_icon from "./userprofile.png"
 import logo_icon from "./brandlogo.svg"
 
 //GALLERY IMAGES
-import BirthdayImg from "./birthday.jpg"
-import FlyerOne from "./flyer.jpg"
-import FlyerTwo from "./flyer2.jpg"
-import FlyerThree from "./flyer3.jpg"
 import menu_icon from "./menu_icon.png"
 import question_icon from "./question_icon.png"
 import history_icon from "./history_icon.png"
 import allpost_icon from "./allpost.png"
+import Kidd0 from "./kidd0.jpg"
+import Kidd1 from "./kidd1.jpg"
+import Kidd2 from "./kidd2.jpg"
+import Kidd3 from "./kidd3.jpg"
+import Kidd4 from "./kidd4.jpg"
 
 
 export const assets = {
@@ -38,17 +39,17 @@ export const assets = {
     question_icon,
     history_icon,
     allpost_icon,
-
+    userprofile_icon,
     sidepic,
     buildings,
-    elvis, 
     setting_icon,
     user_icon, 
     galleryImg: {
-        BirthdayImg,
-        FlyerOne,
-        FlyerTwo,
-        FlyerThree
+        Kidd0,
+        Kidd1,
+        Kidd2,
+        Kidd3,
+        Kidd4
     }
 
 }

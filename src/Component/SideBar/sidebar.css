@@ -1,6 +1,6 @@
 .db-sidebar{
     height: 100vh;
-    background: var(--sec-bg-clr);
+    background: var(--accent-beige);
     overflow: hidden;
   }
   .db-sidebar-container{
@@ -31,7 +31,7 @@
     width: 100%;
   }
   .bottom-section .section:hover{
-    background: var(--pry-bg-clr);
+    background: var(--pry-bg);
   }
   .bottom-section .section img{
     width: 40px;
