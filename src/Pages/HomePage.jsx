@@ -1,9 +1,9 @@
 import React from 'react'
 
 import "../Styles/homepage.css"
-import LandingPage from '../Component/LandingPage'
+import LandingPage from '../Component/LandingPage/LandingPage'
 import Gallery from '../Component/Gallery/Gallery'
-import Header from '../Component/Header'
+import Header from '../Component/Header/Header'
 import Footer from '../Component/Footer/Footer'
 import Contact from '../Component/Contact/Contact'
 import About from '../Component/About/About'

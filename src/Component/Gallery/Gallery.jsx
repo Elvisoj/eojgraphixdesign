@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
-import ImageCard from '../ImageCard'
+import ImageCard from './ImageCard'
 import "./gallery.css"
 
 import { AppContext } from '../../Context/AppContext'
 
 function Gallery() {
-    const { galleryData } = useContext(AppContext)
+    const { posts } = useContext(AppContext)
 
 
   return (
@@ -19,7 +19,7 @@ function Gallery() {
         <div className="gallery-container">
             <h2>Our Latest Designs</h2>
             <div className="image-card-container">
-                {galleryData.map(data => <ImageCard key={data.imgId} data={data}/> )}
+                {posts.map(data => <ImageCard key={data.id} data={data}/> )}
             </div>
         </div>
     </div>

@@ -1,0 +1,288 @@
+.db-main{
+    flex: 1;
+    border-left: 2px solid var(--bdr-clr);
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+}
+.db-main-container{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.top-layer{
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    padding-bottom: 50px;
+}
+.cards{
+    padding: 20px;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden scroll;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    grid-template-areas: 
+    "userprofile userprofile newpost newpost"
+    "analysics analysics  analysics viewposts";
+}
+.card{
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 200ms ease;
+    background: var(--card-bg-clr);
+    color: var(--sec-tx-clr);
+    height: 300px;
+}
+.card:hover{
+    scale: .95;
+    transition: 200ms ease;
+}
+.userprofile{
+    grid-area: userprofile;
+}
+.newpost{
+    grid-area: newpost;
+}
+.analysics{
+    grid-area: analysics;
+}
+.viewposts{
+    grid-area: viewposts;
+}
+
+
+/******** userprofile *******/
+.userprofile{
+    grid-area: userprofile;
+}
+.userprofile-container,
+.user-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.user-details .user-icon{
+    width: 100px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+
+
+/******** userprofile *******/
+.newpost{
+    grid-area: newpost;
+}
+.create-post-btn{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--pry-tx-clr);
+}
+.create-post-btn .icon img{
+    width: 90px;
+    height: 90px;
+    place-content: center;
+    text-align: center;
+    font-size: 3rem;
+    color: var(--pry-tx-clr);
+}
+.create-post-btn .text{
+    margin-top: 10px;
+    color: var(--sec-tx-clr);
+    font-size: 1.3rem;
+}
+
+
+
+/******** userprofile *******/
+.analysics{
+    grid-area: analysics;
+}
+.analysics-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.analysics-container .pi-chart{}
+.analysics-container .pi-chart .chart{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: radial-gradient(white 40%, transparent 40% 100%), conic-gradient( red 20%, blue 0 30%, aqua 0 60%, purple 0 80%, orange 0 95%, orangered 0);
+    margin-bottom: 10px;
+}
+
+.analysics-container .data{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.analysics-container .data p{
+    position: relative;
+}
+.analysics-container .data p::before{
+    position: absolute;
+    left: -12px;
+    top: 4px;
+    
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #000;
+}
+.analysics-container .left-data{
+    left: 20px;
+}
+.analysics-container .right-data{
+    
+    right: 20px;
+}
+
+
+
+/******** userprofile *******/
+.viewposts{
+    grid-area: viewposts;
+}
+.viewposts img{
+    width: 40px;
+}
+.viewposts-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.viewposts-container img{
+    width: 100px;
+}
+.viewposts-container h2{
+    font-size: 1.3rem;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+/*********** bottom-layer ********/
+.top-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.manage-posts{
+    width: 100%;
+    height: 100vh;
+    padding: 0 5%;
+    background: var(--pry-bg-clr);
+    overflow: hidden;
+}
+
+/*************** POST SECTION ********/
+.manage-posts .post-container{
+    width: 100%;
+    height: 100%;
+    scrollbar-width: none;
+    overflow: hidden scroll;
+}
+.manage-posts h2{
+    background: var(--btn-clr);
+    padding: 10px 20px;
+    color: var(--pry-tx-clr);
+    font-family: 'Franklin Gothic Medium';
+}
+.manage-posts table{
+    border-collapse: collapse;
+    width: 100%;
+    background: var(--sec-bg-clr);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
+}
+.manage-posts table thead {
+    background: var(--card-bg-clr);
+    color: var(--btn-clr);
+}
+.manage-posts table tbody tr:hover{
+    background: var(--card-bg-clr);
+}
+.manage-posts table tr th, .manage-posts table tr td{
+    padding: 10px;
+    color: var(--sec-tx-clr);
+    text-align: left;
+    border-bottom: 2px solid var(--sec-tx-clr);
+}
+.manage-posts table .post-author{
+    width: 30%;
+}
+.manage-posts table .post-thumbnail img{
+    width: 30%;
+}
+.manage-posts table .post-title{
+    width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.manage-posts table .post-action{
+    display: flex;
+    width: 100px;
+}
+.manage-posts table .post-action span button{
+    margin-right: 3px;
+    cursor: pointer;
+    background: var(--sec-bg-clr);
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    border: none;
+    padding: 2px;
+    border-radius: 3px;
+}
+.manage-posts table .post-action span button.delete-post:hover{
+    background: rgb(252, 217, 217);
+}
+.post-section table .post-action span button.edit-post:hover{
+    background: rgb(248, 252, 217);
+}
+.back-to-dashboard{
+    position: absolute;
+    bottom: 60px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .cards{
+        display: flex;
+        flex-direction: column;
+    }    
+    .card{
+        width: 100%;
+    }
+}

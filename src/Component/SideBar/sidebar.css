@@ -1,0 +1,45 @@
+.db-sidebar{
+    height: 100vh;
+    background: var(--sec-bg-clr);
+    overflow: hidden;
+  }
+  .db-sidebar-container{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction:column ;
+  }
+.db-sidebar .navbar{
+    position: relative;
+    height: fit-content;
+}
+
+  .menu-icon{
+    padding: 20px 10px;
+  }
+  .menu-icon img{
+    width: 40px;
+    cursor: pointer;
+  }
+
+  .bottom-section{
+    justify-self: end;
+  }
+  .bottom-section .section{
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  .bottom-section .section:hover{
+    background: var(--pry-bg-clr);
+  }
+  .bottom-section .section img{
+    width: 40px;
+    margin: 10px;
+  }
+  .bottom-section .signout button{
+    padding: 10px 30px;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }

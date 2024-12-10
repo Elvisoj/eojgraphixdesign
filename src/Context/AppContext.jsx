@@ -1,56 +1,89 @@
 import { createContext, useRef, useState } from "react";
 
 //GALLERY IMAGES
-import BirthdayImg from "../assets/birthday.jpg"
-import FlyerOne from "../assets/flyer.jpg"
-import FlyerTwo from "../assets/flyer2.jpg"
-import FlyerThree from "../assets/flyer3.jpg"
+const { BirthdayImg, FlyerOne, FlyerTwo, FlyerThree } = assets.galleryImg
 
 export const AppContext = createContext();
 const defaultGalleryData = [
     {
-        imgId: 21,
-        imgUrl: BirthdayImg,
+        id: 21,
+        thumbnail: BirthdayImg,
         title: "Birthday Flyer",
+        isEditing: false,
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, praesentium"
     },
     {
-        imgId: 22,
-        imgUrl: FlyerOne,
+        id: 22,
+        thumbnail: FlyerOne,
         title: "Graphic Design Poster",
+        isEditing: false,
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, praesentium"
     },
     {
-        imgId: 23,
-        imgUrl: FlyerTwo,
+        id: 23,
+        thumbnail: FlyerTwo,
         title: "Graphic Design",
+        isEditing: false,
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, praesentium"
     },
     {
-        imgId: 24,
-        imgUrl: FlyerThree,
+        id: 24,
+        thumbnail: FlyerThree,
         title: "Poster Design",
+        isEditing: false,
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, praesentium"
     }
 ]
 
-
+const formStateData = {
+    title: "",
+    thumbnail: null,
+    description: "",
+    id: null
+};
 
 const ContextProvider = ( props )=>{
     const [ galleryData, setGalleryData ] = useState(defaultGalleryData)
+    const [ posts, setPosts ] = useState(defaultGalleryData);
+    const [ formState, setFormState ] = useState(formStateData);
+
+    const [ errors, setErrors ] = useState("");
+    const [ managePostActive, setManagePostActive ] = useState(false);
+    const [ isFormActive, setIsFormActive ] = useState(false);
+    
     const headerREF = useRef()
     
     
-    const toggleHeader = ()=>{
-        headerREF.current.classList.toggle("active");
+    const handleFormEdit = (postId)=>{
+        let [newPost] = (posts.filter(post => post.id === postId))
+        setFormState(newPost)
+        console.log(formState)
+        setIsFormActive(prev => !prev)
+    }
+    const handleDelete = (postId)=>{
+        setPosts(posts.filter(post => post.id !== postId))
     }
 
     
     const AppData = {
         galleryData,
+        posts,
+        setPosts,
+        managePostActive,
+        setManagePostActive,
+        isFormActive,
+        setIsFormActive,
+        formState, 
+        setFormState,
+        formStateData,
+        errors, 
+        setErrors,
+        //postToEdit, 
+        //setPostToEdit,
         headerREF,
 
-        toggleHeader
+        handleDelete,
+        handleFormEdit
     }
     return (
         <AppContext.Provider value={ AppData }>

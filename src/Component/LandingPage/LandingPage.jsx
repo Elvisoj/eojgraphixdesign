@@ -1,10 +1,7 @@
-import { useContext, useState } from "react"
-import Logo from "../assets/brandlogo.svg"
-import { AppContext } from "../Context/AppContext"
-import { assets } from "../assets/assets";
+import { useState } from "react"
+import { assets } from "../../assets/assets";
 
 function LandingPage() {
-  const { toggleHeader } = useContext(AppContext);
   const [ popupActive, setPopupActive ] = useState(false)
   const [ skip, setSkip ] = useState(1000)
   
@@ -24,10 +21,7 @@ function LandingPage() {
             </div>
           </div>)
         }
-      <div className="handburger-menu" onClick={toggleHeader}>
-        <div className="menubar"></div>
-      </div>
-      <img src={Logo} alt="logo" className="brand-logo" />
+      
       <div className="landing-page-container">
         <div className="section-context">
             <p>Welcome to</p>

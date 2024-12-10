@@ -1,11 +1,11 @@
-import React from 'react'
+
 
 function ImageCard(props) {
-    const { imgUrl, title, imgId, description } = props.data;
+    const { id, title, thumbnail, description } = props.data;
   return (
-    <div key={imgId} className='image-card'>
+    <div key={id} className='image-card'>
       <div className="content">
-        <img src={imgUrl} alt="" />
+        <img src={thumbnail} alt="" />
         <div className="about">
             <h2 className="title">{title}</h2>
             <p className="descrption">{description}</p>
