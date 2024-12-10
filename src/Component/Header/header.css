@@ -8,7 +8,7 @@
 .homepage-header-container{
     width: 100%;
     background: var(--pry-bg-clr);
-    background: var(--accent-beige);
+    background: var(--pry-brown);
     display: flex;
     flex-direction: column;
 }

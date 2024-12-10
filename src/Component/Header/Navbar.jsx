@@ -5,6 +5,9 @@ import { AppContext } from "../../Context/AppContext"
 function Navbar(props) {
     const { headerREF } = useContext(AppContext)
     const toggleTheme =(e)=>{
+        const root =document.getElementById("root");
+        root.classList.toggle("active")
+        console.log(root)
         e.target.classList.toggle("toggle")
       }
 

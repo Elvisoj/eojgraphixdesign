@@ -1,8 +1,10 @@
 .landing-page{
     position: relative;
     width: 100%;
-    background: url(../../assets/backgroung-image.jpg), linear-gradient(rgba(0, 0, 0, 0.514), rgba(165, 42, 42, 0.637));
-
+    background: url(../../assets/backgroung-image.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
 }
 .landing-page-container{
@@ -11,6 +13,7 @@
     justify-content: center;
     align-items: center;
     padding: var(--pd-l);
+    background: linear-gradient(rgba(0, 0, 0, 0.714), rgba(3, 2, 2, 0.637))
 }
 .landing-page-container .section-context{
     padding: var(--pd-l);
@@ -39,7 +42,7 @@
     position: relative;
     display: block;
     padding: var(--pd-s) ;
-    color: var(--accent-beige);
+    color: var(--soft-cream);
 
 }
 .subscription form{

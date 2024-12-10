@@ -46,14 +46,6 @@
   --dark-accent: #5a2d0c;
   --tx-light: #333333;
 
-/*   
-  --pry-bg: #2b1b0f;
-  --pry-brown: #a0522d;
-  --accent-beige: #c19a6b;
-  --soft-cream: #bca487;
-  --dark-accent: #3d2a14;
-  --tx-light: #f5f5f5; */
-
   
   --fx-s: 1rem;
   --fx-m: 2rem;
@@ -63,7 +55,14 @@
   --pd-m: 2rem;
   --pd-s: 1rem;
 }
-
+#root.active{
+  --pry-bg: #2b1b0f;
+  --pry-brown: #a0522d;
+  --accent-beige: #c19a6b;
+  --soft-cream: #bca487;
+  --dark-accent: #3d2a14;
+  --tx-light: #f5f5f5; 
+}
 
 *{
   margin: 0;

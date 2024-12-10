@@ -1,10 +1,14 @@
 #about{
-    background: linear-gradient(rgba(17, 11, 17, 0.575), rgba(131, 70, 13, 0.753)), url("../../assets/Buildings.jpg"), linear-gradient(rgb(15, 11, 15), rgb(63, 18, 2));
-    padding: 40px 10%;
+    background: url("../../assets/Buildings.jpg"), linear-gradient(rgb(15, 11, 15), rgb(63, 18, 2));
+    
     width: 100%;
     height: 50%;
     overflow: hidden scroll;
     color: var(--pry-tx-clr);    
+}
+.about-container{
+    background: linear-gradient(rgba(17, 11, 17, 0.575), rgba(0, 0, 0, 0.753));
+    padding: 40px 10%;
 }
 #about::-webkit-scrollbar{
     display: none;

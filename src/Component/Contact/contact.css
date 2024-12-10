@@ -3,7 +3,7 @@
 .contact{
     width: 100%;
     height: auto;
-    background:var(--accent-beige);
+    background:var(--soft-cream);
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -21,7 +21,8 @@
     margin-top: 20px;
     flex: 1;
     padding: 30px 20px;
-    border: 2px solid var(--soft-cream);
+    background: var(--pry-bg);
+    border: 2px solid var(--pry-bg);
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
     border-radius: 10px;
 }
