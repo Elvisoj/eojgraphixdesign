@@ -1,4 +1,5 @@
 import { createContext, useRef, useState } from "react";
+import { assets } from "../assets/assets";
 
 //GALLERY IMAGES
 const { BirthdayImg, FlyerOne, FlyerTwo, FlyerThree } = assets.galleryImg

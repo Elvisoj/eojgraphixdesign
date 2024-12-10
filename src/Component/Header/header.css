@@ -107,7 +107,7 @@
     align-items: center;
     width: 100%;
     height: 80px;
-    background: #cf0f0f;
+    background: var(--btn-clr);
     font-size: var(--fx-m);
     font-weight: 700;
     color: var(--pry-tx-clr);
@@ -129,7 +129,7 @@
     left: 5px;
     width: 26px;
     height: 26px;
-    background: radial-gradient( #cf0f0f, black);
+    background: radial-gradient( var(--pry-bg-clr), var(--btn-clr));
     border-radius: 50%;
     transition: 200ms linear;
 }

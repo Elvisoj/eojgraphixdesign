@@ -1,0 +1,129 @@
+.landing-page{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(125deg,
+                rgb(216, 11, 107), 
+                rgb(225, 0, 255), 
+                rgb(149, 14, 212)80% 0);
+}
+
+
+.landing-page-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--pd-m);
+}
+.landing-page-container .section-context{
+    padding: var(--pd-l);
+}
+.landing-page-container .section-context > p{
+    font-size: var(--ls-fx-s);
+    padding: var(--pd-s) 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.landing-page-container .section-context > h2{
+    font-size: var(--ls-fx-m);
+    padding: 0 0 var(--pd-m);
+    max-width: 80%;
+    color: var(--pry-tx-clr);
+}
+.landing-page-container .section-context > h1{
+    font-size: var(--ls-fx-m);
+    padding-left: var(--pd-s);
+    bkorder-left: 4px solid var(--logo-clr);
+}
+
+
+/* SUBSCRIPTION BUTTON SECTION */
+ .subscription{
+    position: relative;
+    display: block;
+    padding: var(--pd-s) ;
+
+}
+.subscription form{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.subscription form input{
+     border: none;
+     border-bottom: 2px solid var(--pry-tx-clr);
+     border-radius: 0;
+     flex: 4;
+}
+.subscription form button{
+    border-radius: 0;
+    background: var(--pry-bg-clr);
+    color: var(--btn-clr);
+    padding: 10px;
+    flex: 2;
+}
+.subscription form button:hover{
+    background: whitesmoke;
+    scale: 1;
+    border: none;
+}
+
+@keyframes subLine {
+    0%{
+        width: 10%;
+    }
+    30%{
+        width: 100%;
+    }
+    60%{
+        width: 0%;
+    }
+    65%{
+        width: 2px;
+        height: 1%;
+        border: 2px solid var(--btn-clr);
+    }
+    80%{
+        width: 2px;
+        height: 80%;
+    }
+    100%{
+        width: 0%;
+    }
+    
+}
+
+.landing-page-container h1{
+    font-size: var(--ls-fx-l);
+    color: var(--pry-tx-clr);
+}
+
+
+@media screen and (max-width: 768px) {
+    .landing-page-container{
+        padding: 20px;
+    }
+    .landing-page-container .section-context{
+        padding: 10px;
+    }
+    .landing-page-container h2{
+        font-size: var(--fx-m);
+    }    
+    .subscription{
+        justify-content: left;
+    }
+    .subscription p{
+        margin: 0;
+        width: 100%;
+    }
+    .subscription form input::placeholder{
+        font-size: .8rem;
+    }
+    .subscription button{
+        width: fit-content;
+        font-size: .8rem;
+        margin: 0;
+    }
+    
+} 

@@ -32,22 +32,7 @@
     --btn-clr: #0890ff;
 }
 
-button{
-    all: unset;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-    padding: 10px 15px;
-    margin-top: 10px;
-    cursor: pointer;
-    background: var(--btn-clr);
-    color: var(--pry-tx-clr);
-    transition: 200ms linear;
-}
-button:hover{
-    background: var(--pry-bg-clr);
-    color: var(--btn-clr);
-    scale: .96;
-    transition: 200ms linear;
-}
+
 .homepage-container{
     width: 100%;   
     height: 100%; 
@@ -106,157 +91,11 @@ button:hover{
 
 
 /* HOME LANDING SECTION */
-.landing-page{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(125deg, rgb(216, 11, 107), rgb(225, 0, 255), rgb(149, 14, 212)80% 0);
-}
-
-
-.landing-page-container{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: var(--pd-m);
-}
-.landing-page-container .section-context{
-    padding: var(--pd-l);
-}
-.landing-page-container .section-context > p{
-    font-size: var(--ls-fx-s);
-    padding: var(--pd-s) 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-.landing-page-container .section-context > h2{
-    font-size: var(--ls-fx-m);
-    padding: 0 0 var(--pd-m);
-    max-width: 80%;
-    color: var(--pry-tx-clr);
-}
-.landing-page-container .section-context > h1{
-    font-size: var(--ls-fx-m);
-    padding-left: var(--pd-s);
-    bkorder-left: 4px solid var(--logo-clr);
-}
-
-
-/* SUBSCRIPTION BUTTON SECTION */
-.subscription{
-    position: relative;
-    display: flex;
-    padding: var(--pd-s) ;
-    flex-direction: column;
-}
-.subscriphtion::after{
-    content: "";
-    width: 10%;
-    height: 2px;
-    background: var(--btn-clr);
-
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-
-    animation: subLine 10s linear infinite;
-}
-.subscription p{
-    margin-right: 20px;
-    color: var(--pry-tx-clr);
-    width: 70%;
-}
-.subscription form {
-    border-bottom: 2px solid var(--btn-clr);
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-}
-.subscription form input{
-    border: none;
-    width: 70%;
-    background: transparent;
-    padding: 0 20PX;
-    color: var(--pry-tx-clr);
-    margin-bottom: -15px;
-}
-.subscription input:hover,
-.subscription input:focus{
-    border: none;
-    outline: none;
-}
-.subscription input::placeholder{
-    color: var(--pry-tx-clr);
-    font-size: var(--fx-s);
-}
-
-.subscription button{
-    box-shadow: none;
-
-}
-@keyframes subLine {
-    0%{
-        width: 10%;
-    }
-    30%{
-        width: 100%;
-    }
-    60%{
-        width: 0%;
-    }
-    65%{
-        width: 2px;
-        height: 1%;
-        border: 2px solid var(--btn-clr);
-    }
-    80%{
-        width: 2px;
-        height: 80%;
-    }
-    100%{
-        width: 0%;
-    }
-    
-}
-
-.landing-page-container h1{
-    font-size: var(--ls-fx-l);
-    color: var(--pry-tx-clr);
-}
-
-:focus{
-    padding: 20px;
-    border: none;
-    border: 2px solid var(--btn-clr);
-    outline: none;
-
-}
 
 
 
 
 @media screen and (max-width: 768px) {
-    .landing-page-container .section-context{
-        padding: var(--pd-m);
-    }
-    .landing-page-container h2{
-        font-size: var(--fx-m);
-    }    
-    /* .subscription{
-        flex-direction: column;
-        justify-content: left;
-    }
-    .subscription p{
-        margin: 0;
-        width: 100%;
-    }
-    .subscription button{
-        margin-top: 20px;
-        width: fit-content;
-        margin-left: -190px;
-    }
-    */
     .contact-container{
         flex-direction: column;
     }

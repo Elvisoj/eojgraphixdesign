@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { assets } from "../../assets/assets";
+import "./landingpage.css"
 
 function LandingPage() {
   const [ popupActive, setPopupActive ] = useState(false)
