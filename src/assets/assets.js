@@ -43,6 +43,7 @@ export const assets = {
     buildings,
     elvis, 
 
+<<<<<<< HEAD
     galleryImg: {
         BirthdayImg,
         FlyerOne,
@@ -51,3 +52,8 @@ export const assets = {
     }
 
 }
+=======
+    setting_icon,
+    user_icon 
+}
+>>>>>>> 7181e0876f7e112374ee7e52f00810dc40315f0c
