@@ -4,11 +4,11 @@
     width: 100%;
     height: 50%;
     overflow: hidden scroll;
-    color: var(--pry-tx-clr);    
+    color: var(--soft-cream);    
 }
 .about-container{
     background: linear-gradient(rgba(17, 11, 17, 0.575), rgba(0, 0, 0, 0.753));
-    padding: 40px 10%;
+    padding: var(--pd-ls)
 }
 #about::-webkit-scrollbar{
     display: none;
@@ -16,12 +16,12 @@
 
 .about-content{
     backdrop-filter: blur(5px);
-    padding: 20px;
+    padding: var(--pd-m);
     border-radius: 10px;
     margin-top: 30px;
     margin-bottom: 30px;
     box-shadow: 0 0 10px rgba(17, 11, 17, 0.575);
 }
 .about-content h3{
-    padding: 20px 0;
+    padding: var(--pd-s) 0;
 }

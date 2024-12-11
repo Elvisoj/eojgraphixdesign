@@ -7,29 +7,6 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
     width: 100%;
     height: 100vh;
-
-
-    --ls-fx-s: 2rem;
-    --ls-fx-m: 2.5rem;
-    --ls-fx-l: 4rem;
-
-    /* SMALL SCREEN FONT SIZE */
-    --fx-s: 1.3rem;
-    --fx-m: 2rem;
-    --fx-l: 3rem;
-
-    --pd-l: 2.5rem;
-    --pd-m: 2rem;
-    --pd-s: 1rem;
-
-    --pry-bg-clr: whitesmoke;
-    --pry-tx-clr: whitesmoke;
-    --sec-bg-clr: white;
-    --sec-tx-clr: #333333;
-    --logo-clr: hwb(182 3% 0%);
-    
-    --card-bg-clr: #dcf5f8;
-    --btn-clr: #0890ff;
 }
 
 

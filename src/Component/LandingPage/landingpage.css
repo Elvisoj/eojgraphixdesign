@@ -9,14 +9,12 @@
 }
 .landing-page-container{
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: var(--pd-l);
+    
+    padding: var(--pd-ls);
     background: linear-gradient(rgba(0, 0, 0, 0.714), rgba(3, 2, 2, 0.637))
 }
 .landing-page-container .section-context{
-    padding: var(--pd-l);
+    padding: var(--pd-l) 0;
 }
 .landing-page-container .section-context > p{
     font-size: var(--ls-fx-s);
@@ -32,7 +30,6 @@
 }
 .landing-page-container .section-context > h1{
     font-size: var(--ls-fx-m);
-    padding-left: var(--pd-s);
     color: var(--soft-cream);
     padding-bottom: var(--pd-l);
 }
@@ -41,7 +38,7 @@
  .subscription{
     position: relative;
     display: block;
-    padding: var(--pd-s) ;
+    padding: var(--pd-s) 0;
     color: var(--soft-cream);
 
 }
@@ -53,10 +50,16 @@
     margin-top: 20px;
     background: var(--pry-bg);
     border-top-right-radius: 10px;
+    max-width: 800px;
 }
 .subscription form input{
      border: none;
      margin: 0;
+}
+.subscription input:hover,
+.subscription input:focus{
+    border: none;
+    outline: none;
 }
 .subscription form button{
     border-radius: 0;

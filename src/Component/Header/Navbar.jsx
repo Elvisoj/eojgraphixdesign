@@ -13,7 +13,7 @@ function Navbar(props) {
 
     return (
         <div className={props.isActive ? "navbar active" : "navbar"}>
-            <div className="theme">Theme 
+            <div className="theme">Sreen Brightness 
                 <span onClick={toggleTheme} className='theme-color'></span>
             </div>
             <div>

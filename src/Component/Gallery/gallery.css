@@ -5,12 +5,12 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 40px 5%;
+    padding: var(--pd-ls);
     margin-bottom: 20px;
-    color: var(--tx-light);
+    color: black;
 }
 .gallery-description{
-    margin: 20px;
+    margin: 20px 0;
 }
 .gallery-description h1{
     border-left: 5px solid var(--pry-brown);
@@ -59,7 +59,8 @@
     padding: 10px;
     background: var(--tx-light);
     width: 100%;
-    color: var(--pry-tx-clr);
+    color: var(--pry-brown);
+    color: whitesmoke;
     transition: 200ms ease;
     opacity: .9;
 }

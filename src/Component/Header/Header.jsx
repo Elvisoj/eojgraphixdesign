@@ -8,7 +8,7 @@ function Header() {
   const [ isActive, setIsActive ]= useState(false)
   window.onscroll = ()=>{
     setIsActive(prev => false)
-}
+  }
 
   return(
     <div className="homepage-header">

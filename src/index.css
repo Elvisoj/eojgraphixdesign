@@ -46,12 +46,16 @@
   --dark-accent: #5a2d0c;
   --tx-light: #333333;
 
-  
+  --ls-fx-s: 2rem;
+  --ls-fx-m: 2.5rem;
+  --ls-fx-l: 4rem;
+
   --fx-s: 1rem;
   --fx-m: 2rem;
   --fx-l: 3rem;
 
-  --pd-l: 2.5rem;
+  --pd-ls: 10%;
+  --pd-l: 3rem;
   --pd-m: 2rem;
   --pd-s: 1rem;
 }
