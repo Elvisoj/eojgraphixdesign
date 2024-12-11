@@ -6,7 +6,7 @@ import { AppContext } from '../../Context/AppContext'
 import Form from './PopupDisplay/Form'
 
 function Main() {
-  const { isFormActive } = useContext(AppContext);
+  const { isFormActive, formButtonName } = useContext(AppContext);
   const title = "Create New Post";
   return (
     <div className='db-main'>
@@ -16,7 +16,7 @@ function Main() {
         </div>
         <div className="bottom-layer">
           <ManagePost />
-          {isFormActive && <Form title={title}/>}
+          {isFormActive && <Form formButtonName={formButtonName} title={title}/>}
         </div>
       </div>
     </div>

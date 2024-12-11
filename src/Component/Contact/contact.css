@@ -10,8 +10,6 @@
     align-items: center;
 
 }
-.contact-container {
-}
 .contact .title{
     font-size: var(--fx-m);
     margin-bottom: 30px;

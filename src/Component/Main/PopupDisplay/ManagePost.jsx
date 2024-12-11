@@ -28,14 +28,14 @@ function ManagePost() {
                             </thead>
                             <tbody>
                                 {posts && posts.map((post) => 
-                                    <tr key={post.id}>
-                                        <td>{post.id}</td>
+                                    <tr key={post.postId}>
+                                        <td>{post.postId}</td>
                                         <td className='post-title'>{post.title}</td>
                                         <td className='post-thumbnail'><img src={post.thumbnail} alt="" /></td>
                                         <td className='post-action'>
                                             <span>
-                                                <button className='edit-post' onClick={() => handleFormEdit(post.id)}>🔱</button>
-                                                <button className='delete-post' onClick={() => handleDelete(post.id)}>❌</button>
+                                                <button className='edit-post' onClick={() => handleFormEdit(post.postId)}>🔱</button>
+                                                <button className='delete-post' onClick={() => handleDelete(post.postId)}>❌</button>
                                             </span>
                                         </td>
 

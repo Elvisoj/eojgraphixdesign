@@ -19,7 +19,7 @@ function Gallery() {
         <div className="gallery-container">
             <h2 className='sub-title'>Our Latest Designs</h2>
             <div className="image-card-container">
-                {posts.map(data => <ImageCard key={data.id} data={data}/> )}
+                {posts?.map(data => <ImageCard key={data.postId} data={data}/> )}
             </div>
         </div>
     </div>

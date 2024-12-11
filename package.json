@@ -13,6 +13,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.7.1",
     "@fortawesome/free-solid-svg-icons": "^6.7.1",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "firebase": "^11.0.2",
     "install": "^0.13.0",
     "npm": "^10.9.2",
     "react": "^18.3.1",

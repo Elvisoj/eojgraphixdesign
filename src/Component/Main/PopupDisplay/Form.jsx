@@ -1,22 +1,20 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { AppContext } from '../../../Context/AppContext';
 import "./form.css"
+import { app, database, storage } from '../../../Config/firebase-config';
+import { collection, addDoc, doc, updateDoc } from 'firebase/firestore';
+
+
+
+
+
 function Form(props) {
 
     const {posts, setPosts, setIsFormActive, formState, setFormState, errors, setErrors } = useContext(AppContext);
+    const [ handUpload, setHandleUpload] = useState()
+    const collectionRef = collection(database, "postData")
+
     
-
-    // GENERATE ID
-    const generatedId = ()=>{
-        const length = 12;
-        let id = '';
-
-        const alpha = "0A1BCD_3EF@G2HIJ6KLM4NOP5QRS7TUV8WX9Y&Z";
-        while(id.length < length){
-            id += alpha[Math.floor(Math.random() * alpha.length)]
-        }
-        return id;
-    }
     
     // FORMVALIDATION
     const formValidation = ()=>{
@@ -35,17 +33,22 @@ function Form(props) {
         }
     }
 
+
         // HANDLE SUNBMIT
     const handleSubmit = (e)=>{
         e.preventDefault()
-        let [checkId] = posts.filter((post) => post.id === formState.id)
+        let [checkId] = posts.filter((post) => post.postId === formState.postId)
         if(checkId){
-            let newpost = posts.filter((post) => post.id !== checkId.id)
-            setPosts([...newpost, formState])
+            const docToUpdate = doc(database, "postData", checkId.postId);
+            updateDoc(docToUpdate, formState)
+            .then(()=> alert("Successfully Updated"))
+            .catch((err)=> alert(err.message))
         }
         else {
             if(!formValidation()) return;
-            setPosts([...posts, {...formState, id: generatedId()}])
+            addDoc(collectionRef, formState)
+            .then(() => alert("Data Added"))
+            .catch((err) => alert(err.message))
 
         }
 
@@ -55,20 +58,26 @@ function Form(props) {
 
     // HANDLE INPUT
     const handleInput = (e)=>{
-        if(formState.id){
-            if(e.target.type === "file"){
+        
+        if(formState.postId){
+            if(e.target.id === "thumbnail"){
                 setFormState({...formState, [e.target.id]: URL.createObjectURL(e.target.files[0])})
+                //thumbnail = URL.createObjectURL(e.target.files[0])
+                //console.log(thumbnail)
             } 
             else{
                 setFormState({...formState, [e.target.id]: e.target.value})
             }
         }
         else{
-            if(e.target.type === "file"){
+            if(e.target.id === "thumbnail"){
                 setFormState({...formState, [e.target.id]: URL.createObjectURL(e.target.files[0])})
+                //thumbnail = URL.createObjectURL(e.target.files[0])
+                //console.log(thumbnail)
             } else{
                 setFormState({...formState, [e.target.id]: e.target.value})
             }
+            
         }
     }
 
@@ -95,7 +104,8 @@ function Form(props) {
                     </label>
                   
                     {errors && <div className="error">Please include {errors}</div>}
-                    <button className="submit-form">Add Post</button>
+                    <button className="submit-form">{props.formButtonName}</button>
+
                 </form>
             </div>
             <button className="back-to-dashboard" onClick={()=> setIsFormActive(prev => !prev)}>Back ➡️</button>

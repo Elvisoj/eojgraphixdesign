@@ -17,11 +17,7 @@ import menu_icon from "./menu_icon.png"
 import question_icon from "./question_icon.png"
 import history_icon from "./history_icon.png"
 import allpost_icon from "./allpost.png"
-import Kidd0 from "./Kidd0.jpg"
-import Kidd1 from "./Kidd1.jpg"
-import Kidd2 from "./Kidd2.jpg"
-import Kidd3 from "./Kidd3.jpg"
-import Kidd4 from "./Kidd4.jpg"
+
 
 
 export const assets = {
@@ -44,12 +40,4 @@ export const assets = {
     buildings,
     setting_icon,
     user_icon, 
-    galleryImg: {
-        Kidd0,
-        Kidd1,
-        Kidd2,
-        Kidd3,
-        Kidd4
-    }
-
 }
